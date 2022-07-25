@@ -12,7 +12,13 @@ def datos_usuario():
         ventana.destroy() 
     ventana=Toplevel()
     ventana.title("DATOS DEL USUARIO")
-    ventana.geometry("450x150")
+    ventana.resizable(False,False)
+    ancho_ventana = 450
+    alto_ventana = 150
+    x_ventana = ventana_principal.winfo_screenwidth() // 2 - ancho_ventana // 2
+    y_ventana = ventana_principal.winfo_screenheight() // 2 - alto_ventana // 2
+    posicion = str(ancho_ventana) + "x" + str(alto_ventana) + "+" + str(x_ventana) + "+" + str(y_ventana)
+    ventana.geometry(posicion)
     ventana.config(bg="PeachPuff2")
     boton_guardar=Button(ventana,text="Guardar",command=imprimir_texto)
     boton_guardar.place(x=185,y=100)
@@ -34,8 +40,14 @@ def datos_usuario():
 def abrirventana_primergrado():
     ventana=Toplevel()
     ventana.title("PRIMER GRADO")
-    ventana.geometry("450x450")
+    ancho_ventana = 450
+    alto_ventana = 450
+    x_ventana = ventana_principal.winfo_screenwidth() // 2 - ancho_ventana // 2
+    y_ventana = ventana_principal.winfo_screenheight() // 2 - alto_ventana // 2
+    posicion = str(ancho_ventana) + "x" + str(alto_ventana) + "+" + str(x_ventana) + "+" + str(y_ventana)
+    ventana.geometry(posicion)
     ventana.config(bg="PeachPuff2")
+    ventana.resizable(False,False)
     etiqueta=Label(ventana,text="Bienvenid@, en esta ventana podras resolver \necuaciones de la forma \naX + B = 0", bg="PeachPuff4", fg="black")
     etiqueta.place(x= 90,y= 10)
     boton_atras=Button(ventana,text="Atras",command=ventana.destroy)
@@ -83,9 +95,15 @@ def abrirventana_primergrado():
 def abrirventana_segundogrado():
     ventana=Toplevel()
     ventana.title("SEGUNDO GRADO")
-    ventana.geometry("450x450")
+    ancho_ventana = 450
+    alto_ventana = 450
+    x_ventana = ventana_principal.winfo_screenwidth() // 2 - ancho_ventana // 2
+    y_ventana = ventana_principal.winfo_screenheight() // 2 - alto_ventana // 2
+    posicion = str(ancho_ventana) + "x" + str(alto_ventana) + "+" + str(x_ventana) + "+" + str(y_ventana)
+    ventana.geometry(posicion)
     ventana.config(bg="PeachPuff2")
-    etiqueta=Label(ventana,text="Bienvenid@, en esta ventana podras resolver \necuaciones de la forma \naX² + BX + C = 0", bg="PeachPuff4", fg="black")
+    ventana.resizable(False,False)
+    etiqueta=Label(ventana,text="Bienvenid@, en esta ventana podras resolver \necuaciones de la forma \nAX² + BX + C = 0", bg="PeachPuff4", fg="black")
     etiqueta.place(x= 100,y= 10)
     boton_atras=Button(ventana,text="Atras",command=ventana.destroy)
     boton_atras.place(x=20,y=350)
@@ -152,9 +170,15 @@ def abrirventana_segundogrado():
 def abrirventana_tercergrado():
     ventana=Toplevel()
     ventana.title("TERCER GRADO")
-    ventana.geometry("450x450")
+    ancho_ventana = 450
+    alto_ventana = 450
+    x_ventana = ventana_principal.winfo_screenwidth() // 2 - ancho_ventana // 2
+    y_ventana = ventana_principal.winfo_screenheight() // 2 - alto_ventana // 2
+    posicion = str(ancho_ventana) + "x" + str(alto_ventana) + "+" + str(x_ventana) + "+" + str(y_ventana)
+    ventana.geometry(posicion)
     ventana.config(bg="PeachPuff2")
-    etiqueta=Label(ventana,text="Bienvenid@, en esta ventana podras resolver \necuaciones de la forma \naX³ + BX² + CX + D = 0", bg="PeachPuff4", fg="black")
+    ventana.resizable(False,False)
+    etiqueta=Label(ventana,text="Bienvenid@, en esta ventana podras resolver \necuaciones de la forma \nAX³ + BX² + CX + D = 0", bg="PeachPuff4", fg="black")
     etiqueta.place(x= 100,y= 10)
     boton_2=Button(ventana,text="Atras",command=ventana.destroy)
     boton_2.place(x=20,y=350)
@@ -233,21 +257,100 @@ def abrirventana_tercergrado():
     boton_limpiar.place(x= 235, y= 385)
 
 def abrirventana_cuartogrado():
+
     ventana=Toplevel()
     ventana.title("CUARTO GRADO")
-    ventana.geometry("450x450")
+    ancho_ventana = 450
+    alto_ventana = 450
+    x_ventana = ventana_principal.winfo_screenwidth() // 2 - ancho_ventana // 2
+    y_ventana = ventana_principal.winfo_screenheight() // 2 - alto_ventana // 2
+    posicion = str(ancho_ventana) + "x" + str(alto_ventana) + "+" + str(x_ventana) + "+" + str(y_ventana)
+    ventana.geometry(posicion)
     ventana.config(bg="PeachPuff2")
-    etiqueta=Label(ventana,text="Bienvenid@", bg="PeachPuff4", fg="black")
-    etiqueta.place(x= 200,y= 10)
-    boton_atras=Button(ventana,text="Atras",command=ventana.destroy)
-    boton_atras.place(x=20,y=350)
+    ventana.resizable(False,False)
+    etiqueta=Label(ventana,text="Bienvenid@, en esta ventana podras resolver \necuaciones de la forma \nAX⁴ + BX³ + CX² + DX + E = 0", bg="PeachPuff4", fg="black")
+    etiqueta.place(x= 100,y= 10)
+    boton_2=Button(ventana,text="Atras",command=ventana.destroy)
+    boton_2.place(x=20,y=350)
+
+    # Entradas
+        
+    a = IntVar()
+    b = IntVar()
+    c = IntVar()
+    d = IntVar()
+
+    E_label = Label(ventana, text= "E= ",bg="PeachPuff2")
+    E_label.place(x= 335 , y= 150)
+    Entry_E = Entry(ventana,textvariable=d,width=5)
+    Entry_E.place(x= 365 ,y= 150)
+    D_label = Label(ventana, text= "D= ",bg="PeachPuff2")
+    D_label.place(x= 255 , y= 150)
+    Entry_D = Entry(ventana,textvariable=d,width=5)
+    Entry_D.place(x= 285 ,y= 150)
+    C_label = Label(ventana, text= "C= ",bg="PeachPuff2")
+    C_label.place(x= 175 , y= 150)
+    Entry_C = Entry(ventana,textvariable=c,width=5)
+    Entry_C.place(x= 205 ,y= 150)
+    B_label = Label(ventana, text= "B= ",bg="PeachPuff2")
+    B_label.place(x= 95 , y= 150)
+    Entry_B = Entry(ventana,textvariable=b, width=5)
+    Entry_B.place(x= 125 ,y= 150)    
+    A_label = Label(ventana, text= "A= ",bg="PeachPuff2")
+    A_label.place(x= 15 , y= 150)
+    Entry_A = Entry(ventana,textvariable=a,width=5)
+    Entry_A.place(x= 45 ,y= 150)
+
+    # Resultados
+    resultado1 = Label(ventana, text="X1 = ", bg="PeachPuff2")
+    resultado1.place(x=200,y=240)
+    resultado2 = Label(ventana, text="X2 = ", bg="PeachPuff2")
+    resultado2.place(x=200,y=268)
+    resultado3 = Label(ventana, text="X3 = ", bg="PeachPuff2")
+    resultado3.place(x=200,y=296)
+    resultado3 = Label(ventana, text="X4 = ", bg="PeachPuff2")
+    resultado3.place(x=200,y=324)
+    # Respuesta
+    def error():
+        messagebox.showinfo("ERROR", "Lo, sentimos en este momento no podemos solucionar ecuaciones de cuarto grado, prueba con una de grado inferior")
+        ventana.destroy()
+    # Entradas_Respuesta
+
+    respuesta1 =Text(ventana,width=20,height=1)
+    respuesta1.place(x=235,y=240)
+    respuesta2=Text(ventana,width=20,height=1)
+    respuesta2.place(x=235,y=268)
+    respuesta3=Text(ventana,width=20,height=1)
+    respuesta3.place(x=235,y=296)
+    respuesta3=Text(ventana,width=20,height=1)
+    respuesta3.place(x=235,y=324)
+    boton_r1=Button(ventana,text="Resolver",command=error)
+    boton_r1.place(x=235,y=355)
+
+    # Limpiar
+
+    def limpiar():
+        a.set(0)
+        b.set(0)
+        c.set(0)
+        d.set(0)
+        respuesta1.delete("1.0","end")
+        respuesta2.delete("1.0","end")
+        respuesta3.delete("1.0","end")    
+    boton_limpiar = Button(ventana, text="Limpiar", command=limpiar)
+    boton_limpiar.place(x= 235, y= 390)
 
 def cerrar_ventana():
     ventana_principal.destroy()
 
 ventana_principal=Tk()
 ventana_principal.resizable(False,False)
-ventana_principal.geometry("600x600")
+ancho_ventana = 600
+alto_ventana = 600
+x_ventana = ventana_principal.winfo_screenwidth() // 2 - ancho_ventana // 2
+y_ventana = ventana_principal.winfo_screenheight() // 2 - alto_ventana // 2
+posicion = str(ancho_ventana) + "x" + str(alto_ventana) + "+" + str(x_ventana) + "+" + str(y_ventana)
+ventana_principal.geometry(posicion)
 ventana_principal.config(bg = "PeachPuff2")
 ventana_principal.title("CALCULADORA DE FUNCIONES")
 
